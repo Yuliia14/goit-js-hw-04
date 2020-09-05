@@ -18,21 +18,21 @@ function reduceArray(array, cb, initial) {
     const element = array[i];
     // Write code under this line
     const index = i;
-    accum = cb(array, element);
+    accum = cb(accum, element);
   }
   return accum;
 }
 
 const arr = [1, 2, 3, 4, 5];
 
-//console.log(reduceArray(arr, add)); // 15
-//console.log(reduceArray(arr, add, 10)); // 25
+console.log(reduceArray(arr, add)); // 15
+console.log(reduceArray(arr, add, 10)); // 25
 
-//console.log(reduceArray(arr, mult)); // 120
-//console.log(reduceArray(arr, mult, 10)); // 1200
+console.log(reduceArray(arr, mult)); // 120
+console.log(reduceArray(arr, mult, 10)); // 1200
 
-//console.log(reduceArray(arr, sub)); // -13
-//console.log(reduceArray(arr, sub, 10)); // -5
+console.log(reduceArray(arr, sub)); // -13
+console.log(reduceArray(arr, sub, 10)); // -5
 
 // Callback функция для получения одного вычисляемого значения массива
 // Функции add, sub и mult принимают два параметра - accum и element, возвращает число - сумму,
